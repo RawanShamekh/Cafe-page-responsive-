@@ -1,0 +1,441 @@
+
+:root{
+   --section-padding:100px;
+   --section-color:#f1f1f1;
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+body{
+    font-family: 'Inconsolata', monospace;
+    background-color: #eeece6
+}
+ul{
+   list-style: none;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+   padding-left:15px;
+   padding-right: 15px;
+}
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  } 
+
+header nav{
+    background-color: black;
+    margin:auto;
+    padding: 5px 20px;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+ 
+    
+   
+}
+header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav ul li {
+    text-align: center;
+
+}
+header nav ul li a{
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 90px;
+    font-weight: 300;
+    margin-right:60px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+@media (max-width:767px) {
+    header nav ul li a{
+        padding: 15px 15px;
+        font-size: 14px;
+        margin-right: 5px;
+
+    }
+    
+}
+@media (max-width:991px) {
+    header nav ul li a{
+        padding: 15px 50px;
+        font-size: 14px;
+
+    }
+    
+}
+header nav ul li a:hover{
+    color: black;
+    background-color: rgb(232, 232, 232);
+    font-weight: 400;
+}
+.landing{
+    background-position: center;
+    background-image: url(../images/coffeehouse.jpg);
+    background-size: cover;
+    min-height:80vh;
+    background-position: center;
+    position: relative;
+
+    
+}
+.landing::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+.landing h1{
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+    font-size: 90px;
+    font-weight: 500;
+    text-align: center;
+}
+.landing p{
+    position: absolute;
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    bottom: 10px;
+    left: 20px;
+}
+.landing address{
+    position: absolute;
+    color: white;
+    
+    bottom: 15px;
+    right: 25px;
+
+}
+/* heading  */
+.heading .heading-content{
+    display: flex;
+    justify-content: center;
+}
+.heading  p{
+    background-color: black;
+    color: white;
+    width: fit-content;
+    font-size: 20px;
+    padding: 5px 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    
+}
+.about-cafe{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+   
+}.about-cafe .container .about-content{
+display: flex;
+justify-content: center;
+width: 650px;
+margin: auto;
+ 
+
+   font-size: 18px;
+   line-height: 1.5;
+   margin-top: 60px;
+   letter-spacing: 1px;
+   font-size: 18px;
+
+   
+
+}
+@media (max-width:767px) {
+    .about-cafe .container .about-content{
+      max-width: 100%;
+        font-size: 15px;
+        padding: 0 10px;
+    }
+    
+    
+}
+.about-cafe .quote-content{
+    width: 650px;
+    margin: auto;
+    margin-top: 50px;
+    font-weight: 500;
+    font-size: 18px;
+    
+    background-color: var(--section-color);
+    padding: 30px 50px;
+    line-height: 1.5;
+   
+    border-left:6px solid #ccc;
+}
+.about-cafe .quote-content q{
+    font-style: italic;
+ 
+  
+    
+
+}
+.about-cafe .quote-content q::before{
+    font-family: "Font Awesome 5 free";
+    content:"\f10d";
+    font-weight:600;
+
+}
+.about-cafe .quote-content q::after{
+    font-family: "Font Awesome 5 free";
+    content:"\f10e";
+    font-weight: 600;
+
+}
+.about-cafe .quote-content p{
+   margin-top: 15px;
+}
+@media (max-width:767px) {
+    .about-cafe .quote-content{
+        width: 100%;
+        font-size: 15px;
+    }
+    
+}
+ .image{
+    width: 650px;
+    margin: auto;
+
+} .image img{
+   width: 100%;
+    margin-top: 40px;
+    filter: grayscale(70%);
+  
+}
+.about-cafe .opening{
+    margin: auto;
+    width: 650px;
+    margin-top: 25px;
+    font-size: 20px;
+    
+}
+.about-cafe .opening span{
+    font-weight:900;
+}
+.about-cafe .opening p{
+    margin-bottom: 25px;
+}
+@media (max-width:767px) {
+    .about-cafe .opening{
+        max-width: 500px;
+    }
+    .about-cafe .opening p{
+        text-align: center;
+    
+
+    }
+    
+}
+.menu .eat{
+    width: 650px;
+    margin: auto;
+    
+}
+@media (max-width:767px) {
+    .menu .eat{
+        max-width: 460px;
+    }
+    
+}
+.menu .eat .eatanddrink{
+    display: flex;
+justify-content: center;
+text-align: center;
+background-color:var(--section-color);
+font-size: 20px;
+font-weight: 500;
+margin-top: 30px;
+padding: 10px;
+box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+position: relative;
+
+}
+.menu .eat .eatanddrink p{
+    flex:1;
+    padding: 3px 0;
+    cursor: pointer;
+}
+.menu .eat .eatanddrink p.active
+,.menu .eat .eatanddrink p.active:hover
+{
+    color: white;
+    background-color: #616161;
+}
+.menu .eat .breakfast{
+    background-color: var(--section-color);
+    margin-top: 1px;
+    padding:  25px 25px  40px 25px;
+ 
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+.menu .eat .breakfast h3{
+    font-size: 20px;
+    margin-bottom:30px;
+    margin-top: 50px;
+    font-weight: 500;
+
+}
+.menu .eat .breakfast p{
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.map{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+   
+}
+.map .map-content{
+    width: 650px;
+    margin: auto;
+}
+.map .map-content p{
+    margin-top: 50px;
+    font-size: 20px;
+    margin-bottom: 30px;
+
+}
+
+.map .map-content .fly{
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+.map .map-content .fly .fly-content{
+    color: white;
+    background-color: black;
+    font-weight: 500;
+    width: fit-content;
+    display: inline-block;
+    padding:2px 5px ;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.map .map-content p span{
+    font-weight:700;
+}
+.map .map-content form input:not(input[type="submit"]){
+    width: 100%;
+    padding: 20px 15px;
+
+    
+}
+.map .map-content form{
+    position: relative;
+}
+.map .map-content form input{
+    border: 1px solid #ccc;
+    outline: none;
+    margin-bottom: 20px;
+    transition: 0.3s;
+
+}
+.map .map-content form input::placeholder,
+.map .map-content form input::-ms-value{
+    font-size: 18px;
+}
+@media (max-width:767px) {
+    .map .map-content .fly,
+.map .map-content form input{
+    max-width: 100%;
+}
+
+    
+}
+.map .map-content form input[type="submit"]{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    letter-spacing: 1px;
+}
+.map .map-content form input[type="submit"]:hover{
+    background-color: #CCCCCC;
+    color: #000000;
+
+}
+@media (max-width:767px) {
+    .map .map-content form input[type="submit"]{
+        
+        font-size: 16px;
+        padding: 5px 10px;
+        max-width: 460px;
+        
+
+
+    }
+    .map .map-content form input:not(input[type="submit"]){
+        max-width: 460px;
+    }
+    
+}
+footer{
+    background-color: var(--section-color);
+    padding: 80px;
+    
+}
+footer p{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+footer p span{
+    text-decoration: underline;
+}
+@media (max-width:767px) {
+  
+    .image img{
+        max-width:460px;
+        
+        
+    }
+  .map-content{
+    max-width: 460px;
+  }
+  .map-content p{
+  
+    font-size: 14px;
+  }
+}
